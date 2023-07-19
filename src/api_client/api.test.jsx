@@ -23,7 +23,7 @@ describe('Api', () => {
                 })
             );
             const response = await Api().login(email, password);
-            expect(global.fetch).toHaveBeenCalledWith('http://localhost:8080/login', {
+            expect(global.fetch).toHaveBeenCalledWith('https://mock-burgerqueen.onrender.com/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -62,7 +62,7 @@ describe('Api', () => {
                 })
             );
             const response = await Api().fetchProducts({ token });
-            expect(global.fetch).toHaveBeenCalledWith('http://localhost:8080/products', {
+            expect(global.fetch).toHaveBeenCalledWith('https://mock-burgerqueen.onrender.com/products', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -113,7 +113,7 @@ describe('Api', () => {
                 })
             )
             const result = await Api().fetchSendOrder(orderDate, token);
-            expect(fetch).toHaveBeenCalledWith('http://localhost:8080/orders', {
+            expect(fetch).toHaveBeenCalledWith('https://mock-burgerqueen.onrender.com/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ describe('Api', () => {
             //   Llama a la función y verifica los resultados
             const result = await Api().fetchGetOrder({ token });
 
-            expect(global.fetch).toHaveBeenCalledWith('http://localhost:8080/orders', {
+            expect(global.fetch).toHaveBeenCalledWith('https://mock-burgerqueen.onrender.com/orders', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -196,7 +196,7 @@ describe('Api', () => {
             // Llama a la función y verifica los resultados
             const result = await Api().changeStatus(order, status, token);
 
-            expect(global.fetch).toHaveBeenCalledWith('http://localhost:8080/orders/1', {
+            expect(global.fetch).toHaveBeenCalledWith('https://mock-burgerqueen.onrender.com/orders/1', {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -242,7 +242,7 @@ describe('Api', () => {
             //   Llama a la función y verifica los resultados
             const result = await Api().fetchShowUsers({ token });
 
-            expect(global.fetch).toHaveBeenCalledWith('http://localhost:8080/users', {
+            expect(global.fetch).toHaveBeenCalledWith('https://mock-burgerqueen.onrender.com/users', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -288,7 +288,7 @@ describe('Api', () => {
 
             const result = await Api().fetchCreateProduct({ token, name, price, img, type });
             expect(fetch).toHaveBeenCalledWith(
-                'http://localhost:8080/products',
+                'https://mock-burgerqueen.onrender.com/products',
                 {
                     method: 'POST',
                     headers: {
@@ -319,7 +319,7 @@ describe('Api', () => {
             )
             const result = await Api().fetchCreateStaff({ token, email, password, role });
             expect(fetch).toHaveBeenCalledWith(
-                'http://localhost:8080/users',
+                'https://mock-burgerqueen.onrender.com/users',
                 {
                     method: 'POST',
                     headers: {
@@ -352,7 +352,7 @@ describe('Api', () => {
             )
             const result = await Api().fetchEditProducts(token, product);
             expect(fetch).toHaveBeenCalledWith(
-                `http://localhost:8080/products/${product.id}`,
+                `https://mock-burgerqueen.onrender.com/products/${product.id}`,
                 {
                     method: 'PATCH',
                     headers: {
@@ -381,7 +381,7 @@ describe('Api', () => {
             )
             const result = await Api().fetchEditStaff(token, user);
             expect(fetch).toHaveBeenCalledWith(
-                `http://localhost:8080/users/${user.id}`,
+                `https://mock-burgerqueen.onrender.com/users/${user.id}`,
                 {
                     method: 'PATCH',
                     headers: {
@@ -408,7 +408,7 @@ describe('Api', () => {
             )
             const result = await Api().fetchDeleteProduct({ token, productId });
             expect(fetch).toHaveBeenCalledWith(
-                `http://localhost:8080/products/${productId}`,
+                `https://mock-burgerqueen.onrender.com/products/${productId}`,
                 {
                     method: 'DELETE',
                     headers: {
@@ -442,7 +442,7 @@ describe('Api', () => {
             )
             const result = await Api().fetchDeleteStaff({ token, user });
             expect(fetch).toHaveBeenCalledWith(
-                `http://localhost:8080/users/${user.id}`,
+                `https://mock-burgerqueen.onrender.com/users/${user.id}`,
                 {
                     method: 'DELETE',
                     headers: {
