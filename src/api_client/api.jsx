@@ -2,7 +2,7 @@ const api = () => {
     // Valida el correo y contraseña del usuario
     const login = async (email, password) => {
         try {
-            const response = await fetch('http://localhost:8080/login', {
+            const response = await fetch('https://mock-burgerqueen.onrender.com/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -22,7 +22,7 @@ const api = () => {
     // accedemos a los productos de la Api
     const fetchProducts = async ({ token }) => {
         try {
-            const response = await fetch('http://localhost:8080/products', {
+            const response = await fetch('https://mock-burgerqueen.onrender.com/products', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ const api = () => {
     // Enviar lista de pedidos  a la Api
     const fetchSendOrder = async (orderDate, token) => {
         try {
-            const response = await fetch('http://localhost:8080/orders', {
+            const response = await fetch('https://mock-burgerqueen.onrender.com/orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ const api = () => {
     // trae lista de pedidos  a la Api
     const fetchGetOrder = async ({ token }) => {
         try {
-            const response = await fetch('http://localhost:8080/orders', {
+            const response = await fetch('https://mock-burgerqueen.onrender.com/orders', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -99,7 +99,7 @@ const api = () => {
     //Cambiando el estado de la orden 
     const changeStatus = async (order, status, token) => {
         try {
-            const response = await fetch(`http://localhost:8080/orders/${order.id}`, {
+            const response = await fetch(`https://mock-burgerqueen.onrender.com/orders/${order.id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ const api = () => {
     // traer usuarios 
     const fetchShowUsers = async ({ token }) => {
         try {
-            const response = await fetch('http://localhost:8080/users', {
+            const response = await fetch('https://mock-burgerqueen.onrender.com/users', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -145,7 +145,7 @@ const api = () => {
 
     //Crear productos
     const fetchCreateProduct = async ({ token, name, price, img, type }) => {
-        return fetch('http://localhost:8080/products', {
+        return fetch('https://mock-burgerqueen.onrender.com/products', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -163,7 +163,7 @@ const api = () => {
 
     //Crear usuarios
     const fetchCreateStaff = async ({ token, email, password, role }) => {
-        return fetch('http://localhost:8080/users', {
+        return fetch('https://mock-burgerqueen.onrender.com/users', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ const api = () => {
 
     //editar producto
     const fetchEditProducts = (token, product) => {
-        return fetch(`http://localhost:8080/products/${product.id}`, {
+        return fetch(`https://mock-burgerqueen.onrender.com/products/${product.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -196,7 +196,7 @@ const api = () => {
 
     //editar staff
     const fetchEditStaff = (token, user) => {
-        return fetch(`http://localhost:8080/users/${user.id}`, {
+        return fetch(`https://mock-burgerqueen.onrender.com/users/${user.id}`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',
@@ -216,7 +216,7 @@ const api = () => {
     const fetchDeleteProduct = async ({ token, productId }) => {
         try {
             // console.log('Realizando solicitud de eliminación del producto');
-            const response = await fetch(`http://localhost:8080/products/${productId}`, {
+            const response = await fetch(`https://mock-burgerqueen.onrender.com/products/${productId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -234,7 +234,7 @@ const api = () => {
     const fetchDeleteStaff = async ({ token, user }) => {
         try {
             // console.log('Realizando solicitud de eliminación del producto');
-            const response = await fetch(`http://localhost:8080/users/${user.id}`, {
+            const response = await fetch(`https://mock-burgerqueen.onrender.com/users/${user.id}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
