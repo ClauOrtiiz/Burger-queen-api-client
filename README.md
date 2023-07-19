@@ -30,8 +30,6 @@ a la cocina para que se preparen de forma ordenada y eficientemente.
 
 Sistema implementado con React, testeado con Jest y desplegado en Vercel.
 
-Para poder usarla, debes tener localmente la siguiente [API](https://github.com/ClauOrtiiz/api-mockBbq)
-
 Te invitamos a navegar en la aplicación ingresando al siguiente link: 
 (https://burger-queen-api-client-iota.vercel.app/),
 
@@ -39,7 +37,7 @@ Accesos:
 
 |Mesero                   |Chef                   |Admin                  |
 |-------------------------|-----------------------|-----------------------|
-|email: waiter@bbq.com    |email: chef@bbq.com    |admin@bbq.com          |
+|email: waiter@bbq.com    |email: chef@bbq.com    |email: admin@bbq.com   |
 |contraseña: 123456       |contraseña: 123456     |contraseña: 123456     |
 
 ![Bbq-vista-login](/src/assets/imgOfReadme/bbq01.png)
