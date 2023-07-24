@@ -120,9 +120,8 @@ Si eres mesera/o 🤵 puedes:
 *** 
 Si eres jefe/a de cocina 👩🏽‍🍳 puedes:
 
-1. Ver las órdenes creadas por el mesero
-2. Actualizar el estado de la orden de pendiente a listo al momento de terminar la preparación
-3. Ver cuánto tiempo tardó preparando la orden
+1.Actualizar el estado de la orden de pendiente a listo al momento de terminar la preparación
+2. Ver el tiempo que sale de la cocina
 
 *** 
 
