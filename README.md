@@ -120,8 +120,8 @@ Si eres mesera/o 🤵 puedes:
 *** 
 Si eres jefe/a de cocina 👩🏽‍🍳 puedes:
 
-1.Actualizar el estado de la orden de pendiente a listo al momento de terminar la preparación
-2. Ver el tiempo que sale de la cocina
+1. Actualizar el estado de la orden de pendiente a listo al momento de terminar la preparación
+2. Ver la hora de ingreso y egreso de la cocina
 
 *** 
 
