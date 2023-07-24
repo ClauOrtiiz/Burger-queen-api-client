@@ -47,6 +47,10 @@ const ModalEditProduct = ({ cancel, product }) => {
                     <div className='item'>
                         <label>Image:  </label>
                         <input className="inp-modal" type="text" placeholder="Enter URL" defaultValue={img} onChange={(e) => setImg(e.target.value)} />
+                        <figure className="box-img">
+                    <img  className='img-unit' src={img}  alt="imagen" />
+
+                </figure>
                     </div>
 
                     <div className='item-select-price'>
